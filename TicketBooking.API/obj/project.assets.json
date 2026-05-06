@@ -36,6 +36,29 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "TicketBooking.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/TicketBooking.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketBooking.Core.dll": {}
+        }
+      },
+      "TicketBooking.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "TicketBooking.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketBooking.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketBooking.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -75,11 +98,23 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "TicketBooking.Core/1.0.0": {
+      "type": "project",
+      "path": "../TicketBooking.Core/TicketBooking.Core.csproj",
+      "msbuildProject": "../TicketBooking.Core/TicketBooking.Core.csproj"
+    },
+    "TicketBooking.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../TicketBooking.Infrastructure/TicketBooking.Infrastructure.csproj",
+      "msbuildProject": "../TicketBooking.Infrastructure/TicketBooking.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.OpenApi >= 10.0.5"
+      "Microsoft.AspNetCore.OpenApi >= 10.0.5",
+      "TicketBooking.Core >= 1.0.0",
+      "TicketBooking.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -113,7 +148,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Core\\TicketBooking.Core.csproj": {
+              "projectPath": "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Core\\TicketBooking.Core.csproj"
+            },
+            "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Infrastructure\\TicketBooking.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Infrastructure\\TicketBooking.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

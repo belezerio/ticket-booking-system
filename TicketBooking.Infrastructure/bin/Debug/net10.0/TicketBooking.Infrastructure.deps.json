@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "TicketBooking.Infrastructure/1.0.0": {
+        "dependencies": {
+          "TicketBooking.Core": "1.0.0"
+        },
+        "runtime": {
+          "TicketBooking.Infrastructure.dll": {}
+        }
+      },
+      "TicketBooking.Core/1.0.0": {
+        "runtime": {
+          "TicketBooking.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TicketBooking.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketBooking.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

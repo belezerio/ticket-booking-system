@@ -1,0 +1,16 @@
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\bin\Debug\net10.0\TicketBooking.Infrastructure.deps.json
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\bin\Debug\net10.0\TicketBooking.Infrastructure.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\bin\Debug\net10.0\TicketBooking.Infrastructure.pdb
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\bin\Debug\net10.0\TicketBooking.Core.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\bin\Debug\net10.0\TicketBooking.Core.pdb
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.AssemblyInfo.cs
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.sourcelink.json
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBo.821A696B.Up2Date
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\refint\TicketBooking.Infrastructure.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\TicketBooking.Infrastructure.pdb
+C:\Users\yash\ticket-booking-system\TicketBooking.Infrastructure\obj\Debug\net10.0\ref\TicketBooking.Infrastructure.dll

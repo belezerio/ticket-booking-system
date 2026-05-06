@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="TicketBooking.API/TicketBooking.API.csproj" />
+  <Project Path="TicketBooking.Core/TicketBooking.Core.csproj" />
+  <Project Path="TicketBooking.Infrastructure/TicketBooking.Infrastructure.csproj" />
+  <Project Path="TicketBooking.Tests/TicketBooking.Tests.csproj" />
+</Solution>

@@ -770,6 +770,20 @@
         "runtime": {
           "bin/placeholder/TicketBooking.Core.dll": {}
         }
+      },
+      "TicketBooking.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Supabase": "1.1.1",
+          "TicketBooking.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketBooking.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketBooking.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1793,6 +1807,11 @@
       "type": "project",
       "path": "../TicketBooking.Core/TicketBooking.Core.csproj",
       "msbuildProject": "../TicketBooking.Core/TicketBooking.Core.csproj"
+    },
+    "TicketBooking.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../TicketBooking.Infrastructure/TicketBooking.Infrastructure.csproj",
+      "msbuildProject": "../TicketBooking.Infrastructure/TicketBooking.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1801,6 +1820,7 @@
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "Moq >= 4.20.72",
       "TicketBooking.Core >= 1.0.0",
+      "TicketBooking.Infrastructure >= 1.0.0",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
       "xunit.runner.visualstudio >= 3.1.4"
@@ -1840,6 +1860,9 @@
           "projectReferences": {
             "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Core\\TicketBooking.Core.csproj": {
               "projectPath": "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Core\\TicketBooking.Core.csproj"
+            },
+            "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Infrastructure\\TicketBooking.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\yash\\ticket-booking-system\\TicketBooking.Infrastructure\\TicketBooking.Infrastructure.csproj"
             }
           }
         }

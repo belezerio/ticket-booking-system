@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TicketBooking.Core\TicketBooking.Core.csproj" />
+    <ProjectReference Include="..\TicketBooking.Infrastructure\TicketBooking.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

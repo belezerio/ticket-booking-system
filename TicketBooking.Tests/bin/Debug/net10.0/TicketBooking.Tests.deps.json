@@ -12,6 +12,7 @@
           "Microsoft.NET.Test.Sdk": "17.14.1",
           "Moq": "4.20.72",
           "TicketBooking.Core": "1.0.0",
+          "TicketBooking.Infrastructure": "1.0.0",
           "xunit": "2.9.3"
         },
         "runtime": {
@@ -593,6 +594,18 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "TicketBooking.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Supabase": "1.1.1",
+          "TicketBooking.Core": "1.0.0"
+        },
+        "runtime": {
+          "TicketBooking.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -834,6 +847,11 @@
       "hashPath": "xunit.extensibility.execution.2.9.3.nupkg.sha512"
     },
     "TicketBooking.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketBooking.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

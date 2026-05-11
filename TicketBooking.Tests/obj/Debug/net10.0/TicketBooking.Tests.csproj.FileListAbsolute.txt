@@ -123,3 +123,5 @@ C:\Users\yash\ticket-booking-system\TicketBooking.Tests\bin\Debug\net10.0\Supaba
 C:\Users\yash\ticket-booking-system\TicketBooking.Tests\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.Tests\bin\Debug\net10.0\System.Reactive.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.Tests\bin\Debug\net10.0\Websocket.Client.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.Tests\bin\Debug\net10.0\TicketBooking.Infrastructure.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.Tests\bin\Debug\net10.0\TicketBooking.Infrastructure.pdb

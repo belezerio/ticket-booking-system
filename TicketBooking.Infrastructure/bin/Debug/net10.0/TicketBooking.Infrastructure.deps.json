@@ -222,6 +222,9 @@
         }
       },
       "TicketBooking.Core/1.0.0": {
+        "dependencies": {
+          "Supabase": "1.1.1"
+        },
         "runtime": {
           "TicketBooking.Core.dll": {
             "assemblyVersion": "1.0.0.0",

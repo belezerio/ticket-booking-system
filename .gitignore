@@ -1,3 +1,4 @@
 node_modules
 .env.local
 appsettings.Development.json
+**/appsettings.Development.json

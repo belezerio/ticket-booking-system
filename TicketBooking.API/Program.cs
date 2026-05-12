@@ -22,7 +22,8 @@ builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ISeatRepository, SeatRepository>();
-
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IRouteRepository, RouteRepository>();
 // Services
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();

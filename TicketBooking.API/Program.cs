@@ -1,7 +1,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Scalar.AspNetCore;
+using Microsoft.OpenApi.Models;
 using TicketBooking.Core.Interfaces;
 using TicketBooking.Infrastructure.Data;
 using TicketBooking.Infrastructure.Repositories;
@@ -21,26 +21,36 @@ builder.Services.AddSingleton<SupabaseClientFactory>(_ =>
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ISeatRepository, SeatRepository>();
 
 // Services
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
-builder.Services.AddScoped<ISeatRepository, SeatRepository>();
-// JWT Authentication
-// JWT Authentication - Supabase uses ES256 (asymmetric)
+
+// JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
+{
+    ValidateIssuerSigningKey = false,
+    ValidateIssuer = false,
+    ValidateAudience = false,
+    ValidateLifetime = true,
+    SignatureValidator = (token, _) =>
+        new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken(token)
+};
+        options.Events = new JwtBearerEvents
         {
-            ValidateIssuerSigningKey = false,
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateLifetime = true,
-            SignatureValidator = (token, parameters) =>
+            OnAuthenticationFailed = context =>
             {
-                var jwt = new System.IdentityModel.Tokens.Jwt.JwtSecurityToken(token);
-                return jwt;
+                Console.WriteLine($"AUTH FAILED: {context.Exception.Message}");
+                return Task.CompletedTask;
+            },
+            OnTokenValidated = context =>
+            {
+                Console.WriteLine("TOKEN VALIDATED OK");
+                return Task.CompletedTask;
             }
         };
     });
@@ -58,17 +68,47 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Swagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ticket Booking API", Version = "v1" });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Enter your JWT token below. Example: Bearer {token}",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT"
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
-// Built-in .NET 10 OpenAPI
-builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
 app.UseMiddleware<TicketBooking.API.Middleware.ExceptionMiddleware>();
-app.MapOpenApi();
-app.MapScalarApiReference();
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ticket Booking API v1");
+    c.RoutePrefix = "swagger";
+});
 app.UseCors("ReactApp");
 app.UseAuthentication();
 app.UseAuthorization();

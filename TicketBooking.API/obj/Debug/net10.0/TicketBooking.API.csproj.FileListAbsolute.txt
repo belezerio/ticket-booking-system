@@ -6,7 +6,6 @@ C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\TicketBo
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\TicketBooking.API.runtimeconfig.json
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\TicketBooking.API.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\TicketBooking.API.pdb
-C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Microsoft.OpenApi.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\TicketBooking.Core.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\TicketBooking.Infrastructure.dll
@@ -56,4 +55,6 @@ C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Websocke
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Scalar.AspNetCore.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\yash\ticket-booking-system\TicketBooking.API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll

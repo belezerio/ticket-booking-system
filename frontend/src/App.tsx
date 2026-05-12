@@ -8,6 +8,8 @@ import RegisterPage from './pages/RegisterPage';
 import EventsPage from './pages/EventsPage';
 import MyBookingsPage from './pages/MyBookingsPage';
 import EventDetailPage from './pages/EventDetailPage';
+import RoutesPage from './pages/RoutesPage';
+import RouteDetailPage from './pages/RouteDetailPage';
 
 function PrivateRoute({ children }: { children: ReactNode }) {
   const { isAuthenticated } = useAuthStore();
@@ -24,6 +26,8 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="events" element={<EventsPage />} />
           <Route path="events/:id" element={<EventDetailPage />} />
+          <Route path="travel" element={<RoutesPage />} />
+<Route path="travel/:id" element={<RouteDetailPage />} />
           <Route
             path="my-bookings"
             element={<PrivateRoute><MyBookingsPage /></PrivateRoute>}

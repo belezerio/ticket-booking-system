@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link to="/events" className="text-gray-600 hover:text-blue-600 font-medium">
             Events
           </Link>
-          <Link to="/routes" className="text-gray-600 hover:text-blue-600 font-medium">
+          <Link to="/travel" className="text-gray-600 hover:text-blue-600 font-medium">
             Travel
           </Link>
 

@@ -10,10 +10,20 @@ import MyBookingsPage from './pages/MyBookingsPage';
 import EventDetailPage from './pages/EventDetailPage';
 import RoutesPage from './pages/RoutesPage';
 import RouteDetailPage from './pages/RouteDetailPage';
+import AdminDashboard from './pages/AdminDashboard';
 
-function PrivateRoute({ children }: { children: ReactNode }) {
-  const { isAuthenticated } = useAuthStore();
-  return isAuthenticated() ? <>{children}</> : <Navigate to="/login" />;
+function PrivateRoute({ children, requireAdmin = false }: { children: ReactNode, requireAdmin?: boolean }) {
+  const { isAuthenticated, user } = useAuthStore();
+  
+  if (!isAuthenticated()) {
+    return <Navigate to="/login" />;
+  }
+
+  if (requireAdmin && user?.role !== 'admin') {
+    return <Navigate to="/" />;
+  }
+
+  return <>{children}</>;
 }
 
 export default function App() {
@@ -27,10 +37,14 @@ export default function App() {
           <Route path="events" element={<EventsPage />} />
           <Route path="events/:id" element={<EventDetailPage />} />
           <Route path="travel" element={<RoutesPage />} />
-<Route path="travel/:id" element={<RouteDetailPage />} />
+          <Route path="travel/:id" element={<RouteDetailPage />} />
           <Route
             path="my-bookings"
             element={<PrivateRoute><MyBookingsPage /></PrivateRoute>}
+          />
+          <Route
+            path="admin"
+            element={<PrivateRoute requireAdmin><AdminDashboard /></PrivateRoute>}
           />
         </Route>
       </Routes>

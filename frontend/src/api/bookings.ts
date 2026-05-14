@@ -19,3 +19,8 @@ export const cancelBooking = async (id: string): Promise<Booking> => {
   const res = await api.post(`/bookings/${id}/cancel`);
   return res.data;
 };
+
+export const getAllBookings = async (): Promise<Booking[]> => {
+  const res = await api.get('/bookings/all');
+  return res.data;
+};

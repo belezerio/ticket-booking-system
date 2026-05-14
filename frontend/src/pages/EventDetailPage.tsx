@@ -97,7 +97,11 @@ export default function EventDetailPage() {
       {/* Hero Header */}
       <div className="relative h-[50vh] w-full overflow-hidden flex items-end pb-12">
         <motion.div style={{ y: headerY, opacity: headerOpacity }} className="absolute inset-0 z-0">
-          <div className={`absolute inset-0 bg-gradient-to-b ${visual.gradient} opacity-40 mix-blend-screen`} />
+          {event.imageUrl ? (
+            <img src={event.imageUrl} alt={event.title} className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen" />
+          ) : (
+            <div className={`absolute inset-0 bg-gradient-to-b ${visual.gradient} opacity-40 mix-blend-screen`} />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/80 to-transparent" />
         </motion.div>
         

@@ -130,8 +130,12 @@ export default function EventsPage() {
                 >
                   {/* Poster Image Area */}
                   <div className="relative h-72 w-full overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${visual.gradient} opacity-80 group-hover:scale-110 transition-transform duration-700 ease-out`} />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                    {event.imageUrl ? (
+                      <img src={event.imageUrl} alt={event.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                    ) : (
+                      <div className={`absolute inset-0 bg-gradient-to-br ${visual.gradient} opacity-80 group-hover:scale-110 transition-transform duration-700 ease-out`} />
+                    )}
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
                     
                     {/* Play button overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
